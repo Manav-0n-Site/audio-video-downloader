@@ -1,0 +1,340 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8A2BE2, #6A5ACD, #9370DB);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(106, 90, 205, 0.3);
+            padding: 40px;
+            margin-top: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(to right, #8A2BE2, #6A5ACD);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .manav-signature {
+            font-style: italic;
+            color: #8A2BE2;
+            font-weight: 600;
+            margin-top: 15px;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background: rgba(138, 43, 226, 0.1);
+        }
+        
+        .vector-art {
+            margin: 20px auto;
+            width: 200px;
+            height: 150px;
+            background: linear-gradient(135deg, #e0b0ff, #dda0dd);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
+        }
+        
+        .vector-art i {
+            font-size: 80px;
+            color: #8A2BE2;
+        }
+        
+        .input-container {
+            display: flex;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .url-input {
+            flex: 1;
+            padding: 18px 25px;
+            border: 2px solid #e0b0ff;
+            border-radius: 50px 0 0 50px;
+            background: #faf5ff;
+            font-size: 1.1rem;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .url-input:focus {
+            outline: none;
+            border-color: #8A2BE2;
+            box-shadow: inset 0 2px 10px rgba(138, 43, 226, 0.1);
+        }
+        
+        .fetch-button {
+            padding: 18px 30px;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            background: linear-gradient(to right, #8A2BE2, #6A5ACD);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+        }
+        
+        .fetch-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+        }
+        
+        .fetch-button:active {
+            transform: translateY(0);
+        }
+        
+        .video-info {
+            display: flex;
+            align-items: center;
+            background: #f9f3ff;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+            display: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0b0ff;
+        }
+        
+        .thumbnail {
+            width: 180px;
+            height: 110px;
+            border-radius: 15px;
+            background: #ddd;
+            margin-right: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-details {
+            flex: 1;
+        }
+        
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #4B0082;
+        }
+        
+        .video-duration {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .download-options {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .download-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px 30px;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 160px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .download-btn i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .download-btn span {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .mp3-btn {
+            background: linear-gradient(to bottom, #8A2BE2, #6A5ACD);
+        }
+        
+        .mp4-btn {
+            background: linear-gradient(to bottom, #9370DB, #7B68EE);
+        }
+        
+        .progress-container {
+            width: 100%;
+            background: #f0f0f0;
+            border-radius: 20px;
+            margin: 20px 0;
+            overflow: hidden;
+            display: none;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .progress-bar {
+            width: 0%;
+            height: 20px;
+            background: linear-gradient(to right, #8A2BE2, #6A5ACD);
+            border-radius: 20px;
+            transition: width 0.5s ease;
+        }
+        
+        .status-text {
+            margin: 15px 0;
+            font-weight: 500;
+            color: #4B0082;
+            display: none;
+        }
+        
+        .download-complete {
+            display: none;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0, 128, 0, 0.1);
+            border-radius: 15px;
+            color: #006400;
+            font-weight: 500;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer p {
+            margin: 8px 0;
+        }
+        
+        .made-by {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+        
+        .instructions {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: left;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .instructions h3 {
+            margin-bottom: 15px;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+            color: #fff;
+        }
+        
+        .instructions li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .input-container {
+                flex-direction: column;
+            }
+            
+            .url-input {
+                border-radius: 50px;
+                margin-bottom: 15px;
+            }
+            
+            .fetch-button {
+                border-radius: 50px;
+            }
+            
+            .video-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .thumbnail {
+                width: 100%;
+                height: 200px;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .download-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .download-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
