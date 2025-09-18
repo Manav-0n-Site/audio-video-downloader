@@ -1,3 +1,9 @@
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
+
 # 🎥 Manav's Media Downloader  
 
 > **Made with ❤️ by Manav, a 17-year-old developer passionate about building useful tools.**  
